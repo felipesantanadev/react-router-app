@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Home = () => {
     return(
@@ -16,7 +17,7 @@ const Home = () => {
                                 <h2 className="subtitle is-3">Let's learn and have fun!</h2>
                                 <div className="field is-grouped">
                                     <div className="control">
-                                        <a className="button is-primary is-medium" href="#platform">How does it work?</a>
+                                        <Link className="button is-primary is-medium" to="/about">How does it work?</Link>
                                     </div>
                                     <div className="control">
                                         <a className="button is-light is-medium" href="https://docs.fortniteapi.com/?version=latest">Explore Library</a>
