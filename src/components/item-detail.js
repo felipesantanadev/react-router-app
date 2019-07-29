@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
 const ItemDetail = ({match}) => {
-    const apiKey = 'ed93852d45c7f57ba6fed0245beba3be';
     const [item, setItem] = useState(null);
+    const apiKey = 'ed93852d45c7f57ba6fed0245beba3be';
 
     useEffect(() => {
         const abort = new AbortController();
@@ -14,7 +14,7 @@ const ItemDetail = ({match}) => {
     },[]);
 
     const fetchItem = async (abort) => {
-        const data = await fetch(`https://fortnite-api.theapinetwork.com/item/get?id=${match.params.id}&authorization=${apiKey}}`, {
+        const data = await fetch(`https://fortnite-api.theapinetwork.com/item/get?id=${match.params.id}&authorization=${apiKey}`, {
             signal: abort.signal
         });
 
@@ -42,11 +42,21 @@ const ItemDetail = ({match}) => {
                     </figure>
                     <div className="media-content">
                         <div className="content">
-                            
+                            <p>
+                                <br/>
+                                <strong>{item.name}</strong> is a(n) <small>{item.rarity}</small> item.
+                                <br />
+                                <strong>Type: </strong> <small>{item.type}</small>
+                                <br/>
+                                <strong>Description: </strong> <small>{item.description}</small>
+                            </p>
+                            <figure>
+                                <img className="image" src={item.images.featured} />
+                            </figure>
                         </div>
                     </div>
                     <div className="media-right">
-                        <button className="delete"></button>
+                        <button className="delete" onClick={() => window.history.go(-1)}></button>
                     </div>
                 </article>
             </div>

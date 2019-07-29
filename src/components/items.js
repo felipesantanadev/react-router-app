@@ -2,7 +2,9 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 const Items = () => {
-    
+    const apiKey = 'ed93852d45c7f57ba6fed0245beba3be';
+    const [items, setItems] = useState([]);
+
     useEffect(() => {
         const abort = new AbortController();
         fetchItems(abort);
@@ -10,12 +12,10 @@ const Items = () => {
         return function cleanUp(){
             abort.abort();
         }
-    },[items]);
-
-    const [items, setItems] = useState([]);
+    },[]);
 
     const fetchItems = async (abort) => {
-        const data = await fetch('https://fortnite-api.theapinetwork.com/upcoming/get?authorization=ed93852d45c7f57ba6fed0245beba3be', {
+        const data = await fetch(`https://fortnite-api.theapinetwork.com/upcoming/get?authorization=${apiKey}`, {
             signal: abort.signal
         });
         const items = await data.json();

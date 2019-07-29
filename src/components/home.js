@@ -19,7 +19,7 @@ const Home = () => {
                                         <a className="button is-primary is-medium" href="#platform">How does it work?</a>
                                     </div>
                                     <div className="control">
-                                        <a className="button is-light is-medium" href="/library">Explore Library</a>
+                                        <a className="button is-light is-medium" href="https://docs.fortniteapi.com/?version=latest">Explore Library</a>
                                         </div>
                                     </div>
                             </div>
