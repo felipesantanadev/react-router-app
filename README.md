@@ -7,7 +7,7 @@ The project uses a free API of Fortnite game and you'll need to get an API key t
 - Access the [API website](https://fortniteapi.com/) and Create an Account
 - From the [dashboard](https://console.fortniteapi.com/dashboard), create a default project
 - Copy the project's Authorization token
-- Substitute the value of the `const apiKey` inside the files `items.js` and `item-detail.js`
+- Substitute the value of the `const apiKey` inside the `store/apikey.js` file.
 
 ## Available Scripts
 

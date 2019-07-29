@@ -14,7 +14,7 @@ const About = () => {
                     <li>Access the <a href="https://fortniteapi.com/" target="_blank">API website</a> and Create an Account</li>
                     <li>From the <a href="https://console.fortniteapi.com/dashboard" target="_blank">dashboard</a>, create a default project</li>
                     <li>Copy the project's Authorization token</li>
-                    <li>Substitute the value of the const apiKey inside the files <small>items.js</small> and <small>item-detail.js</small></li>
+                    <li>Substitute the value of the const apiKey inside the <small>store/apikey.js</small> file</li>
                 </ul>
             </p>
         </div>

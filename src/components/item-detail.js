@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import apikey from '../store/apikey';
 
 const ItemDetail = ({match}) => {
     const [item, setItem] = useState(null);
-    const apiKey = 'ed93852d45c7f57ba6fed0245beba3be';
 
     useEffect(() => {
         const abort = new AbortController();
@@ -14,7 +14,7 @@ const ItemDetail = ({match}) => {
     },[]);
 
     const fetchItem = async (abort) => {
-        const data = await fetch(`https://fortnite-api.theapinetwork.com/item/get?id=${match.params.id}&authorization=${apiKey}`, {
+        const data = await fetch(`https://fortnite-api.theapinetwork.com/item/get?id=${match.params.id}&authorization=${apikey}`, {
             signal: abort.signal
         });
 

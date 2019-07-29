@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import apikey from '../store/apikey';
 
 const Items = () => {
-    const apiKey = 'ed93852d45c7f57ba6fed0245beba3be';
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const Items = () => {
     },[]);
 
     const fetchItems = async (abort) => {
-        const data = await fetch(`https://fortnite-api.theapinetwork.com/upcoming/get?authorization=${apiKey}`, {
+        const data = await fetch(`https://fortnite-api.theapinetwork.com/upcoming/get?authorization=${apikey}`, {
             signal: abort.signal
         });
         const items = await data.json();
