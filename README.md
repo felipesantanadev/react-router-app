@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as a simple sample to reproduce the use of react-router.
+
+The project uses a free API of Fortnite game and you'll need to get an API key to run the project.
+
+## Get your API key
+
+- Access the [API website](https://fortniteapi.com/) and Create an Account
+- From the [dashboard](https://console.fortniteapi.com/dashboard), create a default project
+- Copy the project's Authorization token
+- Substitute the value of the `const apiKey` inside the files `items.js` and `item-detail.js`
 
 ## Available Scripts
 

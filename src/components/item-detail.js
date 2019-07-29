@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const ItemDetail = ({match}) => {
+    const apiKey = 'ed93852d45c7f57ba6fed0245beba3be';
     const [item, setItem] = useState(null);
 
     useEffect(() => {
@@ -13,7 +14,7 @@ const ItemDetail = ({match}) => {
     },[]);
 
     const fetchItem = async (abort) => {
-        const data = await fetch(`https://fortnite-api.theapinetwork.com/item/get?id=${match.params.id}&authorization=ed93852d45c7f57ba6fed0245beba3be`, {
+        const data = await fetch(`https://fortnite-api.theapinetwork.com/item/get?id=${match.params.id}&authorization=${apiKey}}`, {
             signal: abort.signal
         });
 
